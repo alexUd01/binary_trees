@@ -36,9 +36,12 @@ typedef struct binary_tree_s heap_t;
 
 
 
+
 /* ---------------------> FUNCTION DECLARATIONS <------------------ */
 
-/* print tree (wasn't written by me) */
+/* binary_print_tree - prints a binary tree */
+/* Description: (wasn't written by me) */
+/* Credits: http://stackoverflow.com/a/13755911/5184480) */
 void binary_tree_print(const binary_tree_t *tree);
 
 /* create node */
