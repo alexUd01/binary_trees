@@ -3,7 +3,7 @@
 
 /* -------------------------- measure height ----------------------------- */
 /**
- * binary_tree_height - a function that recursively measures the height of
+ * _binary_tree_height - a function that recursively measures the height of
  *                      a binary tree.
  * @tree: a pointer to the root node of the tree to measure the height
  * Return: returns the height of the tree (SUCCESS) or 0 (on FAILURE)
@@ -18,8 +18,8 @@ int _binary_tree_height(const binary_tree_t *tree)
 		return (0);
 
 	/* measure height recursively */
-	l_height = tree->left ? (1 + binary_tree_height(tree->left)) : 0;
-	r_height = tree->right ? (1 + binary_tree_height(tree->right)) : 0;
+	l_height = tree->left ? (1 + _binary_tree_height(tree->left)) : 0;
+	r_height = tree->right ? (1 + _binary_tree_height(tree->right)) : 0;
 
 	/* return the length of the farthest node */
 	if (l_height > r_height)
