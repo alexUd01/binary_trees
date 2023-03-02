@@ -83,38 +83,38 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 
 
 
-/* ------------------------- ADVANCED TASKS ---------------------------- */
+/* -------------- ADVANCED TASKS (many are not completed) ----------------- */
 
 
-/* Task: 19 lowest common ancestor (uncompleted) */
+/* Task: 19 lowest common ancestor */
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 				     const binary_tree_t *second);
 
 /* Task: 20 Level-order traversal */
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 
-/* Task: 21 is complete */
+/* Task: 21 is-complete */
 int binary_tree_is_complete(const binary_tree_t *tree);
 
-/* rotate */
+/* Task 22 - 23: rotate */
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 
-/* Binary Search Tree */
+/* Task 24 - 28: Binary Search Tree */
 int binary_tree_is_bst(const binary_tree_t *tree);
 bst_t *bst_insert(bst_t **tree, int value);
 bst_t *array_to_bst(int *array, size_t size);
 bst_t *bst_search(const bst_t *tree, int value);
 bst_t *bst_remove(bst_t *root, int value);
 
-/* AVL Tree */
+/* Task 30 - 34: AVL Tree */
 int binary_tree_is_avl(const binary_tree_t *tree);
 avl_t *avl_insert(avl_t **tree, int value);
 avl_t *array_to_avl(int *array, size_t size);
 avl_t *avl_remove(avl_t *root, int value);
 avl_t *sorted_array_to_avl(int *array, size_t size);
 
-/* Binary Heap */
+/* Task 36 - 40: Binary Heap */
 int binary_tree_is_heap(const binary_tree_t *tree);
 heap_t *heap_insert(heap_t **root, int value);
 heap_t *array_to_heap(int *array, size_t size);
