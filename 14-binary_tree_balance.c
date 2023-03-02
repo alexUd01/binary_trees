@@ -9,7 +9,7 @@
  * Return: returns the height of the tree (SUCCESS) or 0 (on FAILURE)
  *         returns 0 if tree is NULL
  */
-int binary_tree_height(const binary_tree_t *tree)
+int _binary_tree_height(const binary_tree_t *tree)
 {
 	int l_height;
 	int r_height;
@@ -41,8 +41,8 @@ int binary_tree_balance(const binary_tree_t *tree)
 	if (!tree)
 		return (0);
 
-	l_height = tree->left ? binary_tree_height(tree->left) : -1;
-	r_height = tree->right ? binary_tree_height(tree->right) : -1;
+	l_height = tree->left ? _binary_tree_height(tree->left) : -1;
+	r_height = tree->right ? _binary_tree_height(tree->right) : -1;
 
 	/* balance factor is the difference between the left height and */
 	/* right subtrees of a node */
