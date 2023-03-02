@@ -8,7 +8,7 @@
  */
 int binary_tree_balance(const binary_tree_t *tree)
 {
-	int bal = 0, l_bal = 0, r_bal = 0;
+	int bal, l_bal = -1, r_bal = -1;
 
 	if (!tree)
 		return (0);
@@ -19,11 +19,11 @@ int binary_tree_balance(const binary_tree_t *tree)
 
 	/* left recursive check */
 	if (tree->left)
-		l_bal = 1 + binary_tree_balance(tree->left);
+		l_bal += 1 + binary_tree_balance(tree->left);
 
 	/* right recursive check */
 	if (tree->right)
-		r_bal = 1 + binary_tree_balance(tree->right);
+		r_bal += 1 + binary_tree_balance(tree->right);
 
 	/* balance factor is the difference between the left height and */
 	/* right subtrees of a node */
