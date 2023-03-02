@@ -9,20 +9,26 @@
  */
 size_t binary_tree_leaves(const binary_tree_t *tree)
 {
-	size_t count = 0;
+	size_t count, l_count = 0, r_count = 0;
 
 	if (!tree)
 		return (0);
 
-	/* real leaf-node */
+	/* leaf-node reached */
 	if (!tree->left && !tree->right)
 		return (1);
 
-	/* alx leaf node */
 	if (tree->left)
-		count++;
+	{
+		l_count = l_count + binary_tree_leaves(tree->left);
+	}
 	if (tree->right)
-		count++;
+	{
+		r_count = r_count + binary_tree_leaves(tree->right);
+	}
+
+	/* sum up left and right leaf nodes after recursive returns */
+	count = l_count + r_count;
 
 	return (count);
 }
