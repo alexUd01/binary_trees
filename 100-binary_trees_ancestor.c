@@ -33,7 +33,6 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 			temp2 = (binary_tree_t *)second;
 	}
 
-	
 	if (temp == temp2)
 		return (temp);
 

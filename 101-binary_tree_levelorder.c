@@ -1,11 +1,12 @@
 #include "binary_trees.h"
 
+/* ----------------------- UMCOMPLETED PROJECT -------------------- */
 /**
  * binary_tree_levelorder - a function that goes through a binary tree using
  *                          level-order traversal
  * @tree: a pointer to the root node of the tree to traverse
  * @func: a pointer to a finction to call for each node. The value in the node
- *        must be passed as a parameter to his function. 
+ *        must be passed as a parameter to his function.
  */
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
@@ -21,5 +22,5 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 
 	binary_tree_levelorder(tree->left, func);
 	binary_tree_levelorder(tree->right, func);
-	
 }
+/* ----------------------- UMCOMPLETED PROJECT -------------------- */
